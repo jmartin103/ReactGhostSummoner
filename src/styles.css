@@ -1,0 +1,69 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body {
+  background: url(https://365thingsinhouston.com/wp-content/uploads/2015/10/myths-and-legends-of-the-graveyard-nmfh-768x449.jpg);
+}
+
+h2 {
+  color: white;
+}
+
+.ghost {
+  width: 100px;
+  height: 130px;
+  background-color: white;
+  border-radius: 70px 70px 0 0;
+  position: relative;
+  animation: floating 10s infinite;
+  animation-direction: alternate;
+}
+
+.face {
+  width: 100px;
+  position: absolute;
+  top: 60px;
+  left: calc(50% - 50px);
+}
+
+.eyes {
+  height: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.eyes span {
+  width: 24px;
+  height: 24px;
+  background-color: black;
+  border-radius: 50%;
+  transition: 0.3s linear;
+}
+
+.feet {
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  display: flex;
+}
+
+.feet span {
+  flex: 1;
+  height: 20px;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+}
+
+.feet span:first-child {
+  border-radius: 0 0 20px 12px;
+}
+
+@keyframes floating {
+  50% {
+    transform: translateX(100px) translateY(100px);
+  }
+}
